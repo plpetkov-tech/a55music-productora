@@ -12,9 +12,16 @@ a {
 section {
   padding: 20px;
 }
-
 .hero {
-  font-size: clamp(40px, 10vw, 100px);
+  font-size: 30.5rem;
+ }
+ 
+ @media only screen and (max-width: 400px) {
+  .hero {
+  font-size: 10rem;
+  }
+ }
+.hero {
   line-height: 1;
   display: inline-block;
   color: #fff;
