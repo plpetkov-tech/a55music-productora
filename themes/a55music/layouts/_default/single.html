@@ -1,10 +1,27 @@
 {{ define "main" }}
-<header>testin</header>
+<link rel="stylesheet" href='{{ "css/glitch.css" | absURL }}'>
+<header id="site-head" style="background-image: url('{{ "images/milkyway.jpg" | absURL }}')">
+
+    <div class="vertical">
+  <div class="hero-container">
+
+    <div class="environment"></div>
+         {{ with .Site.Params.title }}    <h1 class="hero glitch layers blog-title" data-text={{ . }}><span>{{ . }}</span></h1> {{ end }}
+
+            <h2 class="blog-description">{{ .Title }}</h2>
+  </div>
+
+        <div id="site-head-content" class="inner">
+
+
+           
+                 <a class='btn site-menu' href="{{ "/" | relURL }}" data-title-anchor='yobro'>goback</a>
+        </div>
+    </div>
+</header>
   <main class="content page-template page-{{ .Slug }}" role="main">
     <article class="post page">
       <header class="post-header">
-        <a id="blog-logo" href="{{ "/" | relURL }}">
-          {{ .Site.Title }}
         </a>
       </header>
       <h1 class="post-title">{{ .Title }}</h1>
