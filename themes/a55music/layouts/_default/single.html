@@ -1,4 +1,24 @@
 {{ define "main" }}
+<link rel="stylesheet" href='{{ "css/glitch.css" | absURL }}'>
+<header id="site-head" {{ with .Params.header_image }}style="background-image: url({{ . }})"{{ end }}>
+
+    <div class="vertical">
+  <div class="hero-container">
+
+    <div class="environment"></div>
+    {{ with .Params.header_headline }}    <h1 class="hero glitch layers blog-title" data-text={{ . }}><span>{{ . }}</span></h1> {{ end }}
+
+            {{ with .Params.header_subheadline }}<h2 class="blog-description">{{ . }}</h2>{{ end }}
+  </div>
+
+        <div id="site-head-content" class="inner">
+
+
+           go back
+            <i id='header-arrow' class="fa fa-angle-down"></i>
+        </div>
+    </div>
+</header>
   <main class="content page-template page-{{ .Slug }}" role="main">
     <article class="post page">
       <header class="post-header">
